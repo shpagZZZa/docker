@@ -1,0 +1,19 @@
+version: "3.5"
+
+services:
+    nginx:
+        image: nginx:latest
+        restart: always
+        ports:
+            - "80:80"
+        volumes:
+            - ./projects:/projects
+            - ./nginx:/etc/nginx/conf.d/
+            - ./nginx:/app/public
+        networks:
+            - default
+
+networks:
+    default:
+        name: localnet
+        external: true
