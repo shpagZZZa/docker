@@ -2,9 +2,7 @@
 /nginx/*
 /.env.local
 /.idea/
-/docker-compose/projects/*
 
 !/projects/.gitkeep
 !/nginx/.gitkeep
-!/docker-compose/projects/.gitkeep
 

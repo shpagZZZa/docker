@@ -1,0 +1,3 @@
+LOG_MESSAGE (.+\.?)
+LOG_COMMENT .+
+LOG_COMBINED \[%{TIMESTAMP_ISO8601:timestamp}\] \[\"%{INT:context}\"\] %{WORD:level} %{WORD:project}@%{WORD:logic}:(%{INT:logic_step} step:)? %{LOG_MESSAGE:log_message} - %{WORD:operation_result}(, %{LOG_COMMENT:log_comment})?

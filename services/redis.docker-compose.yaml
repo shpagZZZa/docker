@@ -1,12 +1,11 @@
 version: "3.5"
-
 services:
-    rabbitmq:
-        image: rabbitmq:3-management-alpine
+    redis:
+        image: redis:5.0.7
         restart: always
+        command: ["redis-server", "--appendonly", "yes"]
         ports:
-            - 5672:5672
-            - 15672:15672
+            - '6379:6379'
         networks:
             - default
 
