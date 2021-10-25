@@ -32,7 +32,12 @@ function runProjects() {
 function startProject() {
     mv nginx/$1.conf.save nginx/$1.conf
     echo "$DIVIDER STARTING $1"
-    . bin/run/$1.sh
+    if [[ -f bin/run/$1.sh ]]; then
+        echo "$DIVIDER $1 HAS RUNNER SCRIPT"
+        . bin/run/$1.sh
+    else
+        echo "$DIVIDER $1 DOESNT HAVE RUNNER SCRIPT"
+    fi
     echo "$DIVIDER $1 IS PROBABLY RUNNING"
 }
 
