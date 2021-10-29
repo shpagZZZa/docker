@@ -1,8 +1,8 @@
 /projects/*
-/nginx/*
+#/nginx/*
 /.env.local
 /.idea/
 
 !/projects/.gitkeep
-!/nginx/.gitkeep
+#!/nginx/.gitkeep
 
