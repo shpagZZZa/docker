@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+    mongodb:
+        image: mongo
+        restart: always
+        networks:
+            - default
+        ports:
+            - "27017:27017"
+
+networks:
+    default:
+        name: localnet
+        external: true
