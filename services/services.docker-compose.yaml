@@ -24,6 +24,19 @@ services:
             - 15672:15672
         networks: *networks
 
+    elastic:
+        image: 'elasticsearch:7.4.0'
+        restart: always
+        environment:
+            - discovery.type=single-node
+        ports:
+            - '9202:9200'
+            - '9302:9300'
+        networks:
+            - default
+        volumes:
+            - ./data/elasticsearch:/usr/share/elasticsearch/data
+
     mysql:
         image: mariadb:10.1
         container_name: mysql
@@ -37,8 +50,8 @@ services:
         ports:
             - "3306:3306"
         volumes:
-            - ./db_folders/mysql:/var/lib/mysql
-            - ./userfolder/mysql:/etc/mysql/conf.d
+            - ./data/db_folders/mysql:/var/lib/mysql
+            - ./data/userfolder/mysql:/etc/mysql/conf.d
 
 networks:
     default:

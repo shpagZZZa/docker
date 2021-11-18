@@ -2,11 +2,9 @@
 /nginx/*
 /.env.local
 /.idea/
-/services/userfolder/
-/services/db_folders/
+/services/data/
 
 !/projects/.gitkeep
 !/nginx/.gitkeep
-!/services/db_folders/.gitkeep
-!/services/userfolder/.gitkeep
+!/services/data/.gitkeep
 

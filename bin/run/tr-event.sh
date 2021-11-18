@@ -1,1 +1,1 @@
-docker-compose -f projects/tr-event/tr-event/docker-compose.yaml up -d
+docker-compose -f projects/tr-event/docker-compose.yaml up -d
