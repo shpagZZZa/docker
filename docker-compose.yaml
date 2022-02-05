@@ -10,6 +10,7 @@ services:
             - ./projects:/projects
             - ./nginx:/etc/nginx/conf.d/
             - ./nginx:/app/public
+            - ./test.html:/projects/test.html
         networks:
             - default
 
