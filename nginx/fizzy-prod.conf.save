@@ -1,5 +1,7 @@
 server {
-    listen 80;
+    listen 443;
+    ssl_certificate /ssl/certificate.crt;
+    ssl_certificate_key /ssl/certificate.key;
     server_name fizzy-backend.local;
     server_tokens off;
     proxy_read_timeout 180;
