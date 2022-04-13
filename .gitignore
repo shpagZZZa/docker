@@ -1,5 +1,4 @@
 /projects/*
-/nginx/*
 /.env.local
 /.idea/
 /services/data/

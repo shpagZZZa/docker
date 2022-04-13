@@ -1,0 +1,7 @@
+server {
+    listen 80;
+    server_name sum.local;
+    server_tokens off;
+    root /projects/sabiy;
+    index index.html;
+}
